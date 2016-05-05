@@ -16,7 +16,8 @@ defined('_JEXEC') or die('Restricted access');
 
 	<linkchecker
 		website-url="<?php echo $this->websiteURL; ?>"
-		token="<?php echo $this->token; ?>">
+		token="<?php echo $this->token; ?>"
+		max-fetchers="<?php echo $this->maxFetchers; ?>">
 	</linkchecker>
 
 	<h3>Credits</h3>

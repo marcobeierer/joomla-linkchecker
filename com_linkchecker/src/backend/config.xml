@@ -14,6 +14,15 @@
 			default="">
 		</field>
 
+		<field
+			name="max_fetchers"
+			type="integer"
+			label="COM_SITEMAPGENERATOR_FIELD_MAX_FETCHERS_LABEL"
+			description="COM_SITEMAPGENERATOR_FIELD_MAX_FETCHERS_DESC"
+			first="1"
+			last="10"
+			default="10"
+		/>
 	</fieldset>
 
 	<fieldset

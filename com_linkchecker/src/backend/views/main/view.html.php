@@ -16,6 +16,7 @@ class LinkCheckerViewMain extends JViewLegacy {
 		JHtml::_('jquery.framework');
 
 		$doc = JFactory::getDocument();
+		$params = JComponentHelper::getParams('com_linkchecker');
 
 		$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/resulttable.tag', 'riot/tag');
 		$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker.tag', 'riot/tag');
@@ -26,7 +27,8 @@ class LinkCheckerViewMain extends JViewLegacy {
 
 		$this->onLocalhost = preg_match('/^https?:\/\/(?:localhost|127\.0\.0\.1)/i', JURI::root()) === 1; // TODO improve localhost detection
 		$this->websiteURL = JURI::root();
-		$this->token = JComponentHelper::getParams('com_linkchecker')->get('token');
+		$this->token = $params->get('token');
+		$this->maxFetchers = $params->get('max_fetchers', 10);
 
 		parent::display();
 	}

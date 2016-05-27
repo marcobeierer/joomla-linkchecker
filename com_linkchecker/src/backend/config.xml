@@ -17,10 +17,11 @@
 		<field
 			name="max_fetchers"
 			type="integer"
-			label="COM_SITEMAPGENERATOR_FIELD_MAX_FETCHERS_LABEL"
-			description="COM_SITEMAPGENERATOR_FIELD_MAX_FETCHERS_DESC"
+			label="COM_LINKCHECKER_FIELD_MAX_FETCHERS_LABEL"
+			description="COM_LINKCHECKER_FIELD_MAX_FETCHERS_DESC"
 			first="1"
 			last="10"
+			step="1"
 			default="10"
 		/>
 	</fieldset>

@@ -30,6 +30,11 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$this->token = $params->get('token');
 		$this->maxFetchers = $params->get('max_fetchers', 10);
 
+		if (JFactory::getApplication()->input->getInt('dev', 0) === 1) {
+			$this->onLocalhost = false;
+			$this->websiteURL = 'https://www.marcobeierer.com';
+		}
+
 		parent::display();
 	}
 }

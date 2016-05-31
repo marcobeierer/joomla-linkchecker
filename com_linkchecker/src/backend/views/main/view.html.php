@@ -32,7 +32,7 @@ class LinkCheckerViewMain extends JViewLegacy {
 
 		if (JFactory::getApplication()->input->getInt('dev', 0) === 1) {
 			$this->onLocalhost = false;
-			$this->websiteURL = 'https://www.marcobeierer.com';
+			$this->websiteURL = 'https://www.marcobeierer.com/';
 		}
 
 		parent::display();

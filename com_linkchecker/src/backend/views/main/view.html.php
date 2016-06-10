@@ -5,6 +5,8 @@
  */
 defined('_JEXEC') or die('Restricted access');
 
+require_once(JPATH_COMPONENT_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'shared_functions.php');
+
 class LinkCheckerViewMain extends JViewLegacy {
 	function display($tmpl = null) {
 		JToolbarHelper::title(JText::_('COM_LINKCHECKER'));
@@ -26,15 +28,36 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$doc->addStyleSheet('https://static.marcobeierer.com/cdn/bootstrap/v3/css/wrapped.min.css');
 
 		$this->onLocalhost = preg_match('/^https?:\/\/(?:localhost|127\.0\.0\.1)/i', JURI::root()) === 1; // TODO improve localhost detection
-		$this->websiteURL = JURI::root();
-		$this->token = $params->get('token');
 		$this->maxFetchers = $params->get('max_fetchers', 10);
+		$this->token = $params->get('token');
+
+		$this->websiteURLs = array(JURI::root());
+
+		$isMultilangSupportNecessary = isMultilangSupportNecessary();
+
+		if ($isMultilangSupportNecessary && $this->token != '') {
+			$this->websiteURLs = loadMultilangData(function ($language, $langCode, $defaultLangCode, $sefRewrite) {
+				$websiteURL = JURI::root() . 'index.php/' . $language->sef . '/';
+
+				if ($sefRewrite) {
+					$websiteURL = JURI::root() . $language->sef . '/';
+				}
+
+				return $websiteURL;
+			});
+		}
+
+		$this->showMultilangWarning = $isMultilangSupportNecessary && $this->token == '';
 
 		if (JFactory::getApplication()->input->getInt('dev', 0) === 1) {
 			$this->onLocalhost = false;
-			$this->websiteURL = 'https://www.marcobeierer.com/';
+			$this->websiteURLs = array('https://www.marcobeierer.com/');
+		} else if (JFactory::getApplication()->input->getInt('dev', 0) === 2) {
+			$this->onLocalhost = false;
+			$this->websiteURLs = array('https://www.marcobeierer.com/', 'https://www.marcobeierer.com/tools/link-checker');
 		}
 
 		parent::display();
 	}
+
 }

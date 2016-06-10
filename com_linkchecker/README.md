@@ -2,10 +2,14 @@
 
 ## Changelog
 
+### 1.1.0
+*Release date: 11th June 2016*
+- Improved support for multilingual sites in professional version.
+
 ### 1.0.0
-*Release data: 31th May 2016*
+*Release date: 31th May 2016*
 - Added option to select maximum number of concurrent connections.
 
 ### 1.0.0-beta.1
-*Release data: 5th January 2016*
+*Release date: 5th January 2016*
 - Initial release for Joomla.

@@ -20,8 +20,11 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$doc = JFactory::getDocument();
 		$params = JComponentHelper::getParams('com_linkchecker');
 
+		$doc->addScript('https://static.marcobeierer.com/cdn/jquery/jquery.serialize-object-2.5.0.min.js', 'text/javascript');
+
 		$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/resulttable.tag', 'riot/tag');
 		$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker.tag', 'riot/tag');
+		$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker-scheduler.tag', 'riot/tag');
 		$doc->addScript('https://static.marcobeierer.com/cdn/riot/v2/riot+compiler.min.js', 'text/javascript');
 		$doc->addScriptDeclaration("riot.mount('*', { linkchecker: riot.observable() });");
 
@@ -56,6 +59,8 @@ class LinkCheckerViewMain extends JViewLegacy {
 			$this->onLocalhost = false;
 			$this->websiteURLs = array('https://www.marcobeierer.com/', 'https://www.marcobeierer.com/tools/link-checker');
 		}
+
+		$this->email = JFactory::getConfig()->get('mailfrom');
 
 		parent::display();
 	}

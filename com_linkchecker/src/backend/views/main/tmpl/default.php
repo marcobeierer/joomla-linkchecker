@@ -42,6 +42,17 @@ defined('_JEXEC') or die('Restricted access');
 						token="<?php echo $this->token; ?>"
 						max-fetchers="<?php echo $this->maxFetchers; ?>">
 					</linkchecker>
+
+					<?php if ($this->token != ''): ?>
+						<hr />
+
+						<h3>Scheduler</h3>
+						<linkchecker-scheduler
+							website-url="<?php echo $websiteURL; ?>"
+							token="<?php echo $this->token; ?>"
+							email="<?php echo $this->email; ?>">
+						</linkchecker-scheduler>
+					<?php endif; ?>
 				</div>
 				<?php $firstWebsite = false; ?>
 			<?php endforeach; ?>
@@ -52,12 +63,25 @@ defined('_JEXEC') or die('Restricted access');
 			token="<?php echo $this->token; ?>"
 			max-fetchers="<?php echo $this->maxFetchers; ?>">
 		</linkchecker>
+
+		<?php if ($this->token != ''): ?>
+			<hr />
+
+			<h3>Scheduler</h3>
+			<linkchecker-scheduler
+				website-url="<?php echo $this->websiteURLs[0]; ?>"
+				token="<?php echo $this->token; ?>"
+				email="<?php echo $this->email; ?>">
+			</linkchecker-scheduler>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<hr />
 
-	<h3>Professional Version</h3>
-	<p>The Link Checker is also available as <a href="https://www.marcobeierer.com/tools/link-checker-professional">professional version</a>, which additionally checks your site for <strong>broken images</strong><!--, comes with a scheduler for <strong>automatic daily checks</strong>--> and has improved support for <strong>multilingual sites</strong>.</p>
+	<?php if ($this->token == ''): ?>
+		<h3>Professional Version</h3>
+		<p>The Link Checker is also available as <a href="https://www.marcobeierer.com/tools/link-checker-professional">professional version</a>, which additionally checks your site for <strong>broken images</strong><!--, comes with a scheduler for <strong>automatic daily checks</strong>--> and has improved support for <strong>multilingual sites</strong>.</p>
+	<?php endif; ?>
 
 	<h3>Credits</h3>
 	<p>The Link Checker for Joomla is developed and maintained by <a href="https://www.marcobeierer.com">Marco Beierer</a> and is also available as <a href="https://www.marcobeierer.com/tools/link-checker">online tool</a> and as <a href="https://www.marcobeierer.com/wordpress-plugins/link-checker">WordPress plugin</a>.</p>

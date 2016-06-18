@@ -3,7 +3,7 @@
 ## Changelog
 
 ### 1.2.0
-*Release date: 11th June 2016*
+*Release date: 18th June 2016*
 - Added scheduler support.
 
 ### 1.1.0

@@ -5,7 +5,7 @@
  */
 defined('_JEXEC') or die('Restricted access');
 
-if (!JFactory::getUser()->authorise('core.manage', 'com_sitemapgenerator')) {
+if (!JFactory::getUser()->authorise('core.manage', 'com_linkchecker')) {
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 

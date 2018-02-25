@@ -27,6 +27,11 @@
 		</languages>
 	</administration>
 
+	<media folder="media" destination="com_linkchecker">
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
+
 	<updateservers>
 		<server type="extension" name="Link Checker Update Site">https://static.marcobeierer.com/joomla-extensions/linkchecker/update.xml</server>
 	</updateservers>

@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### Next Release
+- Respect robots.txt of external links.
+
 ### 1.2.0
 *Release date: 18th June 2016*
 - Added scheduler support.

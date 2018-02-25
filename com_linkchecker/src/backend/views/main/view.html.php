@@ -26,7 +26,7 @@ class LinkCheckerViewMain extends JViewLegacy {
 		//$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker-scheduler.tag', 'riot/tag');
 		//$doc->addScript('https://static.marcobeierer.com/cdn/riot/v2/riot+compiler.min.js', 'text/javascript');
 		
-		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-latest.min.js?v=1', 'text/javascript'); // TODO use real version and make sure version is updated when needed
+		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-1.3.0.min.js', 'text/javascript');
 		$doc->addScriptDeclaration("jQuery(document).ready(function() { riot.mount('*', { linkchecker: riot.observable() }); });");
 
 		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/wrapped.min.css?v=3'); // TODO use real version and make sure version is updated when needed

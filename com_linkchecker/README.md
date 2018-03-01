@@ -4,9 +4,6 @@
 
 ### Next Release
 
-### Coming with the next crawler update
-- Respect robots.txt of external links.
-
 ### 1.4.0
 *Release date: 1st March 2018*
 - Added origin system parameter.

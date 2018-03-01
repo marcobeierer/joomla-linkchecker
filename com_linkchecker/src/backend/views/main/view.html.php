@@ -20,13 +20,7 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$doc = JFactory::getDocument();
 		$params = JComponentHelper::getParams('com_linkchecker');
 
-		//$doc->addScript('https://static.marcobeierer.com/cdn/jquery/jquery.serialize-object-2.5.0.min.js', 'text/javascript');
-		//$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/resulttable.tag', 'riot/tag');
-		//$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker.tag', 'riot/tag');
-		//$doc->addScript('https://static.marcobeierer.com/cdn/linkchecker/v1/linkchecker-scheduler.tag', 'riot/tag');
-		//$doc->addScript('https://static.marcobeierer.com/cdn/riot/v2/riot+compiler.min.js', 'text/javascript');
-		
-		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-1.3.0.min.js', 'text/javascript');
+		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-1.4.0.min.js', 'text/javascript');
 		$doc->addScriptDeclaration("jQuery(document).ready(function() { riot.mount('*', { linkchecker: riot.observable() }); });");
 
 		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/wrapped.min.css?v=3'); // TODO use real version and make sure version is updated when needed

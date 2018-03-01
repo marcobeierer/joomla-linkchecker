@@ -40,6 +40,7 @@ defined('_JEXEC') or die('Restricted access');
 					<linkchecker
 						website-url="<?php echo $websiteURL; ?>"
 						token="<?php echo $this->token; ?>"
+						origin-system="joomla"
 						max-fetchers="<?php echo $this->maxFetchers; ?>">
 					</linkchecker>
 
@@ -61,6 +62,7 @@ defined('_JEXEC') or die('Restricted access');
 		<linkchecker
 			website-url="<?php echo $this->websiteURLs[0]; ?>"
 			token="<?php echo $this->token; ?>"
+			origin-system="joomla"
 			max-fetchers="<?php echo $this->maxFetchers; ?>">
 		</linkchecker>
 

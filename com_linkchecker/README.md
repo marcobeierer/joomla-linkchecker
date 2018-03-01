@@ -7,12 +7,23 @@
 ### Coming with the next crawler update
 - Respect robots.txt of external links.
 
+### 1.4.0
+*Release date: 1st March 2018*
+- Added origin system parameter.
+- Added info box to scheduler and hide register form if no token is present.
+- Hide broken images string and show info that not available.
+- Implemented three retries if request could not be sent or no response was received.
+- Explain changed status codes (598 is now 601 and 599 is 602).
+- Added unhandled resources and images.
+- Crawler
+    - Implemented better blocked by robots detection and handling (for external links).
+
 ### 1.3.0
 *Release date: 25th February 2018*
 - Fixed broken links could be removed from the results table with the _Mark as fixed_ button. 
 - Added section for links blocked by robots.txt and a _Mark as working_ button to mark them as working after a manual check.
 - Added common status code information.
-- Broken links in the result table are linked know for the case that someone likes to verify that a link is really broken.
+- Broken links in the result table are linked now for the case that someone likes to verify that a link is really broken.
 - Set default concurrent connections to three.
 - Fixed a permissions bug (used perms of Sitemap Generator in backend view).
 - Improvements to the crawler.

@@ -6,9 +6,9 @@
 
 ### 1.5.0
 *Release date: 4st March 2018*
-- Added support for broken embedded YouTube videos.                                                                    
-- Remove all whitespace (line breaks, spaces, tabs) from token. This prevents Copy and Paste issues.                   
-- Improvement notification message for daily checks.                                                                   
+- Added support for broken embedded YouTube videos.
+- Remove all whitespace (line breaks, spaces, tabs) from token. This prevents Copy and Paste issues.
+- Improvement notification message for daily checks.
 - Crawler performance improvements.
 
 ### 1.4.0

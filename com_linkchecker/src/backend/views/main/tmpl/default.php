@@ -34,17 +34,23 @@ defined('_JEXEC') or die('Restricted access');
 
 	<?php if (count($this->websiteURLs) > 1): ?>
 		<div class="tab-content">
-			<?php $firstWebsite = true; ?>
+			<?php 
+				$firstWebsite = true; 
+				$count = 0; 
+			?>
 			<?php foreach ($this->websiteURLs as $websiteURL): ?>
 				<div role="tabpanel" class="tab-pane <?php if ($firstWebsite) { echo 'active'; } ?>" id="<?php echo md5($websiteURL); ?>">
 					<linkchecker
+						id="<?php echo $count; ?>"
 						website-url="<?php echo $websiteURL; ?>"
 						token="<?php echo $this->token; ?>"
 						origin-system="joomla"
+						enable-scheduler="true"
+						email="<?php echo $this->email; ?>"
 						max-fetchers="<?php echo $this->maxFetchers; ?>">
 					</linkchecker>
 
-					<?php if ($this->token != ''): ?>
+					<?php if ($this->token != '' && false): // TODO disabled because included in tabs now ?>
 						<hr />
 
 						<h3>Scheduler</h3>
@@ -55,7 +61,10 @@ defined('_JEXEC') or die('Restricted access');
 						</linkchecker-scheduler>
 					<?php endif; ?>
 				</div>
-				<?php $firstWebsite = false; ?>
+				<?php 
+					$firstWebsite = false; 
+					$count++; 
+				?>
 			<?php endforeach; ?>
 		</div>
 	<?php else: ?>
@@ -63,10 +72,12 @@ defined('_JEXEC') or die('Restricted access');
 			website-url="<?php echo $this->websiteURLs[0]; ?>"
 			token="<?php echo $this->token; ?>"
 			origin-system="joomla"
+			enable-scheduler="true"
+			email="<?php echo $this->email; ?>"
 			max-fetchers="<?php echo $this->maxFetchers; ?>">
 		</linkchecker>
 
-		<?php if ($this->token != ''): ?>
+		<?php if ($this->token != '' && false): // TODO disabled ?>
 			<hr />
 
 			<h3>Scheduler</h3>

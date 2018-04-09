@@ -4,8 +4,17 @@
 
 ### Next Release
 
+### 1.6.0
+*Release date: 9th April 2018*
+- Results are saved now and don't get discarded when leaving the Link Checker anymore.
+- Improved navigation with tabs.
+- More detailed stats.
+- Crawler
+	- Added status code 603 (Unknown authority error) with explanation.
+	- Added cookie support.
+
 ### 1.5.0
-*Release date: 4st March 2018*
+*Release date: 4th March 2018*
 - Added support for broken embedded YouTube videos.
 - Remove all whitespace (line breaks, spaces, tabs) from token. This prevents Copy and Paste issues.
 - Improvement notification message for daily checks.

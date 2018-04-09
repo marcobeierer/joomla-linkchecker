@@ -56,3 +56,9 @@
 ### 1.0.0-beta.1
 *Release date: 5th January 2016*
 - Initial release for Joomla.
+
+## Libraries
+- [lscache](https://github.com/pamelafox/lscache)                                                                      
+- [Riot.js](http://riotjs.com/)                                                                                        
+- jQuery                                                                                                               
+- jquery.serialize-object

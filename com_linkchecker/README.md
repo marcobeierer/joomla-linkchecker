@@ -4,6 +4,12 @@
 
 ### Next Release
 
+### 1.7.0
+*Release date: 17th April 2018*
+- Highlighting of redirects.
+- Added option to show working redirects.
+	- Has to be enabled in the settings.
+
 ### 1.6.0
 *Release date: 9th April 2018*
 - Results are saved now and don't get discarded when leaving the Link Checker anymore.
@@ -29,7 +35,7 @@
 - Explain changed status codes (598 is now 601 and 599 is 602).
 - Added unhandled resources and images.
 - Crawler
-    - Implemented better blocked by robots detection and handling (for external links).
+	- Implemented better blocked by robots detection and handling (for external links).
 
 ### 1.3.0
 *Release date: 25th February 2018*
@@ -58,7 +64,7 @@
 - Initial release for Joomla.
 
 ## Libraries
-- [lscache](https://github.com/pamelafox/lscache)                                                                      
-- [Riot.js](http://riotjs.com/)                                                                                        
-- jQuery                                                                                                               
+- [lscache](https://github.com/pamelafox/lscache)
+- [Riot.js](http://riotjs.com/)
+- jQuery
 - jquery.serialize-object

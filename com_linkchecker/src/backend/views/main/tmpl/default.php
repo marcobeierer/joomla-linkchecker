@@ -47,7 +47,11 @@ defined('_JEXEC') or die('Restricted access');
 						origin-system="joomla"
 						enable-scheduler="true"
 						email="<?php echo $this->email; ?>"
-						max-fetchers="<?php echo $this->maxFetchers; ?>">
+						max-fetchers="<?php echo $this->maxFetchers; ?>"
+						<?php if ($this->showWorkingRedirects): ?>
+							show-working-redirects="true"
+						<?php endif; ?>
+					>
 					</linkchecker>
 
 					<?php if ($this->token != '' && false): // TODO disabled because included in tabs now ?>
@@ -74,7 +78,11 @@ defined('_JEXEC') or die('Restricted access');
 			origin-system="joomla"
 			enable-scheduler="true"
 			email="<?php echo $this->email; ?>"
-			max-fetchers="<?php echo $this->maxFetchers; ?>">
+			max-fetchers="<?php echo $this->maxFetchers; ?>"
+			<?php if ($this->showWorkingRedirects): ?>
+				show-working-redirects="true"
+			<?php endif; ?>
+		>
 		</linkchecker>
 
 		<?php if ($this->token != '' && false): // TODO disabled ?>

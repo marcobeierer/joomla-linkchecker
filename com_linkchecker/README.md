@@ -4,6 +4,13 @@
 
 ### Next Release
 
+### 1.8.0
+*Release date: 19th April 2018*
+- Auto-resume support if the Link Checker gets opened and a check is already running on the server.
+- Implemented a warning for high crawl-delays.
+- Added a stop button to stop the current check.
+- Implemented protection for check hijacking if token is used.
+
 ### 1.7.0
 *Release date: 17th April 2018*
 - Highlighting of redirects.

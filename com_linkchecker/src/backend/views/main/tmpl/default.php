@@ -48,9 +48,6 @@ defined('_JEXEC') or die('Restricted access');
 						enable-scheduler="true"
 						email="<?php echo $this->email; ?>"
 						max-fetchers="<?php echo $this->maxFetchers; ?>"
-						<?php if ($this->showWorkingRedirects): ?>
-							show-working-redirects="true"
-						<?php endif; ?>
 					>
 					</linkchecker>
 
@@ -79,9 +76,6 @@ defined('_JEXEC') or die('Restricted access');
 			enable-scheduler="true"
 			email="<?php echo $this->email; ?>"
 			max-fetchers="<?php echo $this->maxFetchers; ?>"
-			<?php if ($this->showWorkingRedirects): ?>
-				show-working-redirects="true"
-			<?php endif; ?>
 		>
 		</linkchecker>
 

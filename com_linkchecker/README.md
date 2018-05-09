@@ -4,6 +4,12 @@
 
 ### Next Release
 
+### 1.10.0
+*Release date: 9th May 2018*
+- New 'Mark as fixed on all pages' button.
+- Compression of results before they get stored in browser cache.
+- Fixed dropdown issue.
+
 ### 1.9.0
 *Release date: 22th April 2018*
 - Redesigned user interface.

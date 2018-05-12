@@ -4,6 +4,10 @@
 
 ### Next Release
 
+### 1.11.0
+*Release date: 12th May 2018*
+- Added feedback form.
+
 ### 1.10.0
 *Release date: 9th May 2018*
 - New 'Mark as fixed on all pages' button.

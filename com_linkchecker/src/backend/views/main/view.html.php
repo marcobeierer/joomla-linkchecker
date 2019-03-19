@@ -20,15 +20,19 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$doc = JFactory::getDocument();
 		$params = JComponentHelper::getParams('com_linkchecker');
 
-		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-1.11.0.min.js', 'text/javascript');
+		$doc->addScript(JURI::root() . '/media/com_linkchecker/js/linkchecker-1.15.0-beta.2.min.js', 'text/javascript');
 		$doc->addScriptDeclaration("jQuery(document).ready(function() { riot.mount('*', { linkchecker: riot.observable() }); });");
 
-		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/wrapped.min.css?v=4'); // TODO use real version and make sure version is updated when needed
+		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/wrapped.min.css?v=5'); // TODO use real version and make sure version is updated when needed
 		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/custom.css?v=1'); // TODO use real version and make sure version is updated when needed
 
 		$this->onLocalhost = preg_match('/^https?:\/\/(?:localhost|127\.0\.0\.1)/i', JURI::root()) === 1; // TODO improve localhost detection
 		$this->maxFetchers = (int) $params->get('max_fetchers', 10);
-		$this->token = $params->get('token');
+		$this->token = htmlspecialchars($params->get('token'));
+
+		$this->loginPageURL = htmlspecialchars($params->get('login_page_url', ''));
+		$this->loginFormSelector = htmlspecialchars($params->get('login_form_selector', ''));
+		$this->loginData = htmlspecialchars($params->get('login_data', ''));
 
 		$this->websiteURLs = array(JURI::root());
 

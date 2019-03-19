@@ -48,6 +48,9 @@ defined('_JEXEC') or die('Restricted access');
 						enable-scheduler="true"
 						email="<?php echo $this->email; ?>"
 						max-fetchers="<?php echo $this->maxFetchers; ?>"
+						login-page-url="<?php echo $this->loginPageURL; ?>"
+						login-form-selector="<?php echo $this->loginFormSelector; ?>"
+						login-data="<?php echo $this->loginData; ?>"
 					>
 					</linkchecker>
 
@@ -58,7 +61,11 @@ defined('_JEXEC') or die('Restricted access');
 						<linkchecker-scheduler
 							website-url="<?php echo $websiteURL; ?>"
 							token="<?php echo $this->token; ?>"
-							email="<?php echo $this->email; ?>">
+							email="<?php echo $this->email; ?>"
+							login-page-url="<?php echo $this->loginPageURL; ?>"
+							login-form-selector="<?php echo $this->loginFormSelector; ?>"
+							login-data="<?php echo $this->loginData; ?>"
+							>
 						</linkchecker-scheduler>
 					<?php endif; ?>
 				</div>
@@ -76,6 +83,9 @@ defined('_JEXEC') or die('Restricted access');
 			enable-scheduler="true"
 			email="<?php echo $this->email; ?>"
 			max-fetchers="<?php echo $this->maxFetchers; ?>"
+			login-page-url="<?php echo $this->loginPageURL; ?>"
+			login-form-selector="<?php echo $this->loginFormSelector; ?>"
+			login-data="<?php echo $this->loginData; ?>"
 		>
 		</linkchecker>
 
@@ -86,7 +96,11 @@ defined('_JEXEC') or die('Restricted access');
 			<linkchecker-scheduler
 				website-url="<?php echo $this->websiteURLs[0]; ?>"
 				token="<?php echo $this->token; ?>"
-				email="<?php echo $this->email; ?>">
+				email="<?php echo $this->email; ?>"
+				login-page-url="<?php echo $this->loginPageURL; ?>"
+				login-form-selector="<?php echo $this->loginFormSelector; ?>"
+				login-data="<?php echo $this->loginData; ?>"
+				>
 			</linkchecker-scheduler>
 		<?php endif; ?>
 	<?php endif; ?>

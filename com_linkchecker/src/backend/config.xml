@@ -27,6 +27,33 @@
 	</fieldset>
 
 	<fieldset
+		name="linkchecker_login"
+		label="COM_LINKCHECKER_CONFIG_LOGIN_LABEL"
+		description="COM_LINKCHECKER_CONFIG_LOGIN_DESC">
+		
+		<field
+			name="login_page_url"
+			type="text"
+			label="COM_LINKCHECKER_FIELD_LOGIN_PAGE_URL_LABEL"
+			description="COM_LINKCHECKER_FIELD_LOGIN_PAGE_URL_DESC"
+		/>
+	
+		<field
+			name="login_form_selector"
+			type="text"
+			label="COM_LINKCHECKER_FIELD_LOGIN_FORM_SELECTOR_LABEL"
+			description="COM_LINKCHECKER_FIELD_LOGIN_FORM_SELECTOR_DESC"
+		/>
+
+		<field
+			name="login_data"
+			type="text"
+			label="COM_LINKCHECKER_FIELD_LOGIN_DATA_LABEL"
+			description="COM_LINKCHECKER_FIELD_LOGIN_DATA_DESC"
+		/>
+	</fieldset>
+
+	<fieldset
 		name="permissions"
 		label="JCONFIG_PERMISSIONS_LABEL"
 		description="JCONFIG_PERMISSIONS_DESC">

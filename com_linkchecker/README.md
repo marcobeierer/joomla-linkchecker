@@ -1,11 +1,32 @@
 # Joomla Link Checker
 
 ## TODO
-- Implement AJAX endpoint for quick edit button.
+- Implement AJAX endpoint for support of edit links.
 
 ## Changelog
 
 ### Next Release
+
+### 1.12.0
+*Release date: 20th March 2019*
+- Features
+	- Export result as CSV file.
+	- Result is saved on server for customers of the professional version. So the same result can be downloaded by multiple users or with multiple browsers.
+	- Added form login support.
+- Security
+	- Fixed an XSS vulnerability.
+- Improvements
+	- Result from cache is loaded even if a check is currently running.
+	- Old result is not cleared anymore when a new check is started, but just when the new check has finished.
+	- Split up the 'Progress and Stats' tab in two separate tabs.
+	- Added status code and response text to error message.
+	- Added hint how to change scheduler email address.
+	- Improved status codes page.
+	- Improved professional version page.
+- Bugfixes
+	- Handle failed IsRunning request.
+	- Reset retries count before every check.
+	- Break very long links so that they don't break the layout.
 
 ### 1.11.0
 *Release date: 12th May 2018*

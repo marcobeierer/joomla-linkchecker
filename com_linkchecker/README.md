@@ -1,5 +1,8 @@
 # Joomla Link Checker
 
+## TODO
+- Implement AJAX endpoint for quick edit button.
+
 ## Changelog
 
 ### Next Release

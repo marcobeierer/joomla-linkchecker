@@ -109,7 +109,7 @@ defined('_JEXEC') or die('Restricted access');
 
 	<?php if ($this->token == ''): ?>
 		<h3>Professional Version</h3>
-		<p>The Link Checker is also available as <a href="https://www.marcobeierer.com/tools/link-checker-professional">professional version</a>, which additionally checks your site for <strong>broken images</strong>, comes with a scheduler for <strong>automatic daily checks</strong> and has improved support for <strong>multilingual sites</strong>.</p>
+		<p>The Link Checker is also available as <a href="https://www.marcobeierer.com/tools/link-checker-professional">professional version</a>, which additionally checks your site for <strong>broken images</strong>, <strong>broken YouTube videos</strong>, comes with a scheduler for <strong>automatic daily checks</strong> and <strong>form login support</strong>, and has improved support for <strong>multilingual sites</strong>.</p>
 	<?php endif; ?>
 
 	<h3>Credits</h3>

@@ -8,7 +8,7 @@
 ### Next Release
 
 ### 1.12.0
-*Release date: 20th March 2019*
+*Release date: 21th March 2019*
 - Features
 	- Export result as CSV file.
 	- Result is saved on server for customers of the professional version. So the same result can be downloaded by multiple users or with multiple browsers.

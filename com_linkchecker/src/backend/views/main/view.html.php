@@ -26,17 +26,22 @@ class LinkCheckerViewMain extends JViewLegacy {
 		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/wrapped.min.css?v=5'); // TODO use real version and make sure version is updated when needed
 		$doc->addStyleSheet(JURI::root() . '/media/com_linkchecker/css/custom.css?v=1'); // TODO use real version and make sure version is updated when needed
 
-		$this->onLocalhost = preg_match('/^https?:\/\/(?:localhost|127\.0\.0\.1)/i', JURI::root()) === 1; // TODO improve localhost detection
+		$customWebsiteURL = htmlspecialchars($params->get('custom_website_url', ''));
+		if ($customWebsiteURL == '') {
+			$this->websiteURLs = array(JURI::root());
+			$isMultilangSupportNecessary = isMultilangSupportNecessary();
+		} else {
+			$this->websiteURLs = array($customWebsiteURL);
+			$isMultilangSupportNecessary = false; 
+		}
+
+		$this->onLocalhost = preg_match('/^https?:\/\/(?:localhost|127\.0\.0\.1)/i', $this->websiteURLs[0]) === 1; // TODO improve localhost detection
 		$this->maxFetchers = (int) $params->get('max_fetchers', 10);
 		$this->token = htmlspecialchars($params->get('token'));
 
 		$this->loginPageURL = htmlspecialchars($params->get('login_page_url', ''));
 		$this->loginFormSelector = htmlspecialchars($params->get('login_form_selector', ''));
 		$this->loginData = htmlspecialchars($params->get('login_data', ''));
-
-		$this->websiteURLs = array(JURI::root());
-
-		$isMultilangSupportNecessary = isMultilangSupportNecessary();
 
 		if ($isMultilangSupportNecessary && $this->token != '') {
 			$this->websiteURLs = loadMultilangData(function ($language, $langCode, $defaultLangCode, $sefRewrite) {

@@ -24,6 +24,13 @@
 			step="1"
 			default="3"
 		/>
+
+		<field
+			name="custom_website_url"
+			type="text"
+			label="COM_LINKCHECKER_FIELD_CUSTOM_WEBSITE_URL_LABEL"
+			description="COM_LINKCHECKER_FIELD_CUSTOM_WEBSITE_URL_DESC"
+		/>
 	</fieldset>
 
 	<fieldset

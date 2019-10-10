@@ -7,6 +7,19 @@
 
 ### Next Release
 
+### 1.13.0
+*Release date: 10th October 2019*
+- Features
+	- Added selectable interval (daily, weekly, bi-weekly, every 30 days) to scheduler.
+	- Added _Mark all with same status code and domain as working_ function.
+	- Added new option to set URL to check a custom website.
+		- Can be useful when the backend runs on another domain than the frontend.
+- Improvements
+	- Improved documentation/glossary.
+- Bugfixes
+	- Send no scheduler status request if token is not set, because it always results in an error.
+	- Hide _Professional Version_ tab when token is used.
+
 ### 1.12.0
 *Release date: 21th March 2019*
 - Features

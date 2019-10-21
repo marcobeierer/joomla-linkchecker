@@ -32,78 +32,48 @@ defined('_JEXEC') or die('Restricted access');
 		</ul>
 	<?php endif; ?>
 
-	<?php if (count($this->websiteURLs) > 1): ?>
-		<div class="tab-content">
-			<?php 
-				$firstWebsite = true; 
-				$count = 0; 
-			?>
-			<?php foreach ($this->websiteURLs as $websiteURL): ?>
-				<div role="tabpanel" class="tab-pane <?php if ($firstWebsite) { echo 'active'; } ?>" id="<?php echo md5($websiteURL); ?>">
-					<linkchecker
-						id="<?php echo $count; ?>"
+	<div class="tab-content">
+		<?php 
+			$firstWebsite = true; 
+			$count = 0; 
+		?>
+		<?php foreach ($this->websiteURLs as $websiteURL): ?>
+			<div role="tabpanel" class="tab-pane <?php if ($firstWebsite) { echo 'active'; } ?>" id="<?php echo md5($websiteURL); ?>">
+				<linkchecker
+					id="<?php echo $count; ?>"
+					website-url="<?php echo $websiteURL; ?>"
+					token="<?php echo $this->token; ?>"
+					origin-system="joomla"
+					enable-scheduler="true"
+					email="<?php echo $this->email; ?>"
+					max-fetchers="<?php echo $this->maxFetchers; ?>"
+					login-page-url="<?php echo $this->loginPageURL; ?>"
+					login-form-selector="<?php echo $this->loginFormSelector; ?>"
+					login-data="<?php echo $this->loginData; ?>"
+				>
+				</linkchecker>
+
+				<?php if ($this->token != '' && false): // TODO disabled because included in tabs now ?>
+					<hr />
+
+					<h3>Scheduler</h3>
+					<linkchecker-scheduler
 						website-url="<?php echo $websiteURL; ?>"
 						token="<?php echo $this->token; ?>"
-						origin-system="joomla"
-						enable-scheduler="true"
 						email="<?php echo $this->email; ?>"
-						max-fetchers="<?php echo $this->maxFetchers; ?>"
 						login-page-url="<?php echo $this->loginPageURL; ?>"
 						login-form-selector="<?php echo $this->loginFormSelector; ?>"
 						login-data="<?php echo $this->loginData; ?>"
-					>
-					</linkchecker>
-
-					<?php if ($this->token != '' && false): // TODO disabled because included in tabs now ?>
-						<hr />
-
-						<h3>Scheduler</h3>
-						<linkchecker-scheduler
-							website-url="<?php echo $websiteURL; ?>"
-							token="<?php echo $this->token; ?>"
-							email="<?php echo $this->email; ?>"
-							login-page-url="<?php echo $this->loginPageURL; ?>"
-							login-form-selector="<?php echo $this->loginFormSelector; ?>"
-							login-data="<?php echo $this->loginData; ?>"
-							>
-						</linkchecker-scheduler>
-					<?php endif; ?>
-				</div>
-				<?php 
-					$firstWebsite = false; 
-					$count++; 
-				?>
-			<?php endforeach; ?>
-		</div>
-	<?php else: ?>
-		<linkchecker
-			website-url="<?php echo $this->websiteURLs[0]; ?>"
-			token="<?php echo $this->token; ?>"
-			origin-system="joomla"
-			enable-scheduler="true"
-			email="<?php echo $this->email; ?>"
-			max-fetchers="<?php echo $this->maxFetchers; ?>"
-			login-page-url="<?php echo $this->loginPageURL; ?>"
-			login-form-selector="<?php echo $this->loginFormSelector; ?>"
-			login-data="<?php echo $this->loginData; ?>"
-		>
-		</linkchecker>
-
-		<?php if ($this->token != '' && false): // TODO disabled ?>
-			<hr />
-
-			<h3>Scheduler</h3>
-			<linkchecker-scheduler
-				website-url="<?php echo $this->websiteURLs[0]; ?>"
-				token="<?php echo $this->token; ?>"
-				email="<?php echo $this->email; ?>"
-				login-page-url="<?php echo $this->loginPageURL; ?>"
-				login-form-selector="<?php echo $this->loginFormSelector; ?>"
-				login-data="<?php echo $this->loginData; ?>"
-				>
-			</linkchecker-scheduler>
-		<?php endif; ?>
-	<?php endif; ?>
+						>
+					</linkchecker-scheduler>
+				<?php endif; ?>
+			</div>
+			<?php 
+				$firstWebsite = false; 
+				$count++; 
+			?>
+		<?php endforeach; ?>
+	</div>
 
 	<hr />
 

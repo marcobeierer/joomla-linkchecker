@@ -39,7 +39,7 @@ function loadMultilangData($prepareElementCallback) {
 	$websites = array();
 	//$websites['*'] = $menu->getDefault('*'); // TODO add?
 
-	$languageFilterEnabled = JPluginHelper::isEnabled('system', 'languagefilter');
+	$languageFilterEnabled = isLanguageFilterEnabled();
 	if (!$languageFilterEnabled || $sef != '1') { // TODO check also if sef is enabled
 		return $websites;
 	}

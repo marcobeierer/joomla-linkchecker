@@ -7,6 +7,11 @@
 
 ### Next Release
 
+### 1.13.1
+*Release date: 1st August 2022*
+
+- Added payment info.
+
 ### 1.13.0
 *Release date: 10th October 2019*
 - Features

@@ -8,6 +8,13 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <div class="bootstrap3" style="margin-top: 10px;">
+	<?php if ($this->token == ''): ?>
+		<div class="alert alert-error">
+			<p>The Link Checker needs a paid token to operate since August 2022. For more information have a look at the <a href="https://www.marcobeierer.com/tools/link-checker-professional">information page</a>.</p>
+			<p>Canceling the free version was sadly necessary because the ratio between free and paying users wasn't healthy for a long time and all income from paying users was used to pay the servers required for the free users. The web version on my <a href="https://www.marcobeierer.com/tools/link-checker">website</a> is still free to use. Thank you for your trust and sorry for the inconvenience caused.</p>
+		</div>
+	<?php endif; ?>
+
 	<?php if ($this->onLocalhost): ?>
 		<div class="alert alert-error">
 			It is not possible to use this plugin in a local development environment. The backend service needs to crawl your website and this is just possible if your site is reachable from the internet.

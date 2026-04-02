@@ -7,6 +7,11 @@
 
 ### Next Release
 
+### 2.0.00
+*Release date: 2nd April 2026*
+
+- Migrated extension to Joomla 6.
+
 ### 1.13.1
 *Release date: 1st August 2022*
 
